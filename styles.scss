@@ -34,6 +34,7 @@ body {
 img {
   max-width: 100%;
   display: block;
+  
 }
 
 .container {
@@ -69,6 +70,7 @@ img {
 
 .brand > img {
   height: 62px;
+  
 }
 
 nav {
@@ -143,7 +145,7 @@ nav a:focus-visible {
   border-radius: 28px;
   overflow: hidden;
   background: rgba($white, 0.14);
-  box-shadow: 0 28px 70px rgba($dark, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .hero-illustration img,
@@ -325,33 +327,105 @@ p {
 }
 
 .site-footer {
-  background: rgba(67, 97, 238, 0.08);
-  border: none;
+  background: rgba(67, 97, 238, 0.1);
+  border-top: 1px solid rgba($dark, 0.08);
+  color: #334155;
+  padding: 48px 0 24px;
 }
 
 .footer-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 24px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba($dark, 0.08);
 }
 
-.site-footer p {
+.footer-branding {
+  display: grid;
+  gap: 14px;
+}
+
+.footer-branding .brand img {
+  height: 50px;
+}
+
+.footer-branding p {
   margin: 0;
+  color: #475569;
+  max-width: 320px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.footer-links h3 {
+  margin: 0 0 0.75rem;
+  color: $dark;
+  font-size: 0.95rem;
+}
+
+.footer-links a,
+.footer-links p {
+  display: block;
+  margin: 0 0 0.65rem;
+  text-decoration: none;
   color: #475569;
 }
 
-.site-footer nav a {
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: $bleu-udel;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 18px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+.footer-bottom a {
   text-decoration: none;
   color: #475569;
   font-weight: 600;
 }
 
-.site-footer nav a:hover,
-.site-footer nav a:focus-visible {
+.footer-bottom a:hover,
+.footer-bottom a:focus-visible {
   color: $dark;
+}
+
+@media (max-width: 960px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 960px) {
