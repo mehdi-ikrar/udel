@@ -3,7 +3,8 @@
   color-scheme: light;
   font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #0F172A;
-  background: radial-gradient(circle at top left, rgba(67, 97, 238, 0.18), transparent 28%), radial-gradient(circle at bottom right, rgba(244, 162, 97, 0.14), transparent 28%), #eff4fb;
+  /* stronger transition between grey and white */
+  background: radial-gradient(circle at top left, rgba(67, 97, 238, 0.22), transparent 24%), radial-gradient(circle at bottom right, rgba(244, 162, 97, 0.18), transparent 24%), linear-gradient(180deg, #888b96 0%, #FFFFFF 60%);
   line-height: 1.6;
   text-rendering: optimizeLegibility;
 }
@@ -168,7 +169,7 @@ p {
   color: rgba(15, 23, 42, 0.86);
 }
 
-.button {
+.button, button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -181,25 +182,28 @@ p {
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
-.button:hover,
-.button:focus-visible {
+.button:hover, button:hover,
+.button:focus-visible,
+button:focus-visible {
   transform: translateY(-2px);
 }
 
 .button-primary {
-  background: #FFFFFF;
-  color: #0F172A;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.16);
+  background: #4361EE;
+  color: #FFFFFF;
+  box-shadow: 0 18px 45px rgba(67, 97, 238, 0.16);
+  border-color: rgba(67, 97, 238, 0.12);
 }
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.2);
+  box-shadow: 0 24px 60px rgba(67, 97, 238, 0.24);
+  transform: translateY(-2px);
 }
 
 .button-secondary {
   background: transparent;
-  color: #FFFFFF;
+  color: black;
   border-color: rgba(255, 255, 255, 0.45);
 }
 
@@ -214,6 +218,8 @@ p {
 .section:not(.section-highlight):not(.page-hero) .container {
   background: #FFFFFF;
   border-radius: 32px;
+  /* Ligne à ajouter si vous voulez une vraie bordure visible : */
+  border: 1px solid #F4A261;
   box-shadow: 0 28px 90px rgba(15, 23, 42, 0.08);
   padding: 64px 15px;
 }
@@ -275,7 +281,7 @@ p {
   text-align: left;
 }
 
-.section-actions .button {
+.section-actions .button, .section-actions button {
   margin-top: 1rem;
 }
 
@@ -298,7 +304,7 @@ p {
   padding: 16px 18px;
   border: 1px solid rgba(15, 23, 42, 0.16);
   border-radius: 18px;
-  background: rgba(244, 246, 252, 0.95);
+  background: rgba(136, 139, 150, 0.95);
   font: inherit;
 }
 
@@ -354,7 +360,7 @@ p {
   .container {
     width: min(100%, 100% - 24px);
   }
-  .button {
+  .button, button {
     width: 100%;
   }
   nav {
@@ -366,4 +372,10 @@ p {
   .section:not(.section-highlight):not(.page-hero) .container {
     border-radius: 24px;
   }
+}
+button {
+  background: #4361EE;
+  color: #FFFFFF;
+  border-color: rgba(67, 97, 238, 0.12);
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

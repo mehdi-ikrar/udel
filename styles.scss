@@ -1,6 +1,6 @@
 $bleu-udel: #4361EE;
 $rouge-udel: #B03A2E;
-$gris-fond: #F4F6FC;
+$gris-fond: #888b96;
 $or-accent: #F4A261;
 $dark: #0F172A;
 $white: #FFFFFF;
@@ -9,9 +9,10 @@ $white: #FFFFFF;
   color-scheme: light;
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: $dark;
-  background: radial-gradient(circle at top left, rgba($bleu-udel, 0.18), transparent 28%),
-    radial-gradient(circle at bottom right, rgba($or-accent, 0.14), transparent 28%),
-    #eff4fb;
+  /* stronger transition between grey and white */
+  background: radial-gradient(circle at top left, rgba($bleu-udel, 0.22), transparent 24%),
+    radial-gradient(circle at bottom right, rgba($or-accent, 0.18), transparent 24%),
+    linear-gradient(180deg, $gris-fond 0%, $white 60%);
   line-height: 1.6;
   text-rendering: optimizeLegibility;
 }
@@ -188,6 +189,7 @@ p {
   text-decoration: none;
   font-weight: 700;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  
 }
 
 .button:hover,
@@ -196,19 +198,21 @@ p {
 }
 
 .button-primary {
-  background: $white;
-  color: $dark;
-  box-shadow: 0 18px 45px rgba($dark, 0.16);
+  background: $bleu-udel;
+  color: $white;
+  box-shadow: 0 18px 45px rgba($bleu-udel, 0.16);
+  border-color: rgba($bleu-udel, 0.12);
 }
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  box-shadow: 0 24px 60px rgba($dark, 0.2);
+  box-shadow: 0 24px 60px rgba($bleu-udel, 0.24);
+  transform: translateY(-2px);
 }
 
 .button-secondary {
   background: transparent;
-  color: $white;
+  color: black;
   border-color: rgba($white, 0.45);
 }
 
@@ -223,6 +227,10 @@ p {
 .section:not(.section-highlight):not(.page-hero) .container {
   background: $white;
   border-radius: 32px;
+  
+  /* Ligne à ajouter si vous voulez une vraie bordure visible : */
+  border: 1px solid $or-accent; 
+  
   box-shadow: 0 28px 90px rgba($dark, 0.08);
   padding: 64px 15px;
 }
@@ -380,4 +388,12 @@ p {
   .section:not(.section-highlight):not(.page-hero) .container {
     border-radius: 24px;
   }
+}
+
+button {
+  @extend .button;
+  background: $bleu-udel;
+  color: $white;
+  border-color: rgba($bleu-udel, 0.12);
+  cursor: pointer;
 }
