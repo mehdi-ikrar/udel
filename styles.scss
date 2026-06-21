@@ -33,10 +33,11 @@ html {
 #services
 {
   border: 3px solid $rouge-udel;
-  h3{
+  
+}
+h3{
     color: $bleu-udel;
   }
-}
 body {
   margin: 0;
   min-height: 100vh;
@@ -92,9 +93,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-}
-
-nav a {
+  a {
   display: inline-flex;
   align-items: center;
   padding: 0.85rem 1.15rem;
@@ -105,7 +104,9 @@ nav a {
   background: rgba($white, 0.95);
   border: 1px solid transparent;
   transition: all 0.25s ease;
+  }
 }
+
 
 nav a:hover,
 nav a:focus-visible {
@@ -125,10 +126,10 @@ nav a:focus-visible {
 }
 
 .page-hero {
-  background: linear-gradient(135deg, #4361ee 0%, #b03a2e 100%);
+
   color: $white;
   border-radius: 36px;
-  box-shadow: 0 40px 120px rgba($dark, 0.16);
+
   overflow: hidden;
 }
 
@@ -152,8 +153,9 @@ nav a:focus-visible {
 }
 
 .hero-grid {
-  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 1fr);
+  /*grid-template-columns: minmax(0, 1.4fr) minmax(320px, 1fr);*/
   align-items: center;
+
 }
 
 .hero-illustration,
@@ -162,16 +164,8 @@ nav a:focus-visible {
   overflow: hidden;
   background: rgba($white, 0.14);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.hero-illustration img,
-.highlight-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  
-}
-
+  max-width: 640px;
+  margin-inline: auto;
 .eyebrow {
   margin: 0;
   color: $rouge-udel;
@@ -412,19 +406,18 @@ p {
   justify-content: space-between;
   gap: 1rem;
   padding-top: 18px;
+    p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.92rem;
+    }
+    a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 600;
+    }
 }
 
-.footer-bottom p {
-  margin: 0;
-  color: #64748b;
-  font-size: 0.92rem;
-}
-
-.footer-bottom a {
-  text-decoration: none;
-  color: #475569;
-  font-weight: 600;
-}
 
 .footer-bottom a:hover,
 .footer-bottom a:focus-visible {

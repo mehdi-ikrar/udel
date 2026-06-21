@@ -27,7 +27,8 @@ html {
 #services {
   border: 3px solid #B03A2E;
 }
-#services h3 {
+
+h3 {
   color: #4361EE;
 }
 
@@ -83,7 +84,6 @@ nav {
   flex-wrap: wrap;
   gap: 0.75rem;
 }
-
 nav a {
   display: inline-flex;
   align-items: center;
@@ -115,10 +115,8 @@ nav a:focus-visible {
 }
 
 .page-hero {
-  background: linear-gradient(135deg, #4361ee 0%, #b03a2e 100%);
   color: #FFFFFF;
   border-radius: 36px;
-  box-shadow: 0 40px 120px rgba(15, 23, 42, 0.16);
   overflow: hidden;
 }
 
@@ -140,7 +138,7 @@ nav a:focus-visible {
 }
 
 .hero-grid {
-  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 1fr);
+  /*grid-template-columns: minmax(0, 1.4fr) minmax(320px, 1fr);*/
   align-items: center;
 }
 
@@ -398,13 +396,11 @@ button:focus-visible {
   gap: 1rem;
   padding-top: 18px;
 }
-
 .footer-bottom p {
   margin: 0;
   color: #64748b;
   font-size: 0.92rem;
 }
-
 .footer-bottom a {
   text-decoration: none;
   color: #475569;
