@@ -188,7 +188,6 @@ nav a:focus-visible {
   overflow: hidden;
   background: rgba(255, 255, 255, 0.14);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  max-width: 640px;
   margin-inline: auto;
 }
 
@@ -216,7 +215,8 @@ h2 {
 p {
   margin: 0 0 1.5rem;
   max-width: 760px;
-  color: rgba(15, 23, 42, 0.86);
+  color: black;
+  font-size: 1.05rem;
 }
 
 .button, button {
@@ -318,6 +318,27 @@ button:focus-visible {
   padding: 0;
   display: grid;
   gap: 14px;
+}
+
+.feature-grid article {
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+
+.feature-grid article .price {
+  margin-top: auto;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #B03A2E;
+}
+
+/* Centrer les titres des cartes tarifaires */
+.feature-grid article h2,
+.feature-grid article h3 {
+  text-align: center;
+  margin-top: 0;
 }
 
 .list-check li {
@@ -456,7 +477,8 @@ button:focus-visible {
     grid-template-columns: 1fr 1fr;
   }
   .content-block {
-    display: block;
+    display: flex;
+    flex-direction: column;
     gap: 32px;
   }
 }
@@ -480,6 +502,10 @@ button:focus-visible {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .site-header {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    padding-bottom: 32px;
   }
 }
 @media (max-width: 680px) {
