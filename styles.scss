@@ -135,12 +135,12 @@ main {
 }
 
 .section {
-  padding: 4.5rem 0;
+  padding: 2.6rem 0;
 }
 
 .section-hero,
 .page-hero {
-  padding: 5.5rem 0;
+  padding: 3.6rem 0;
 }
 
 .page-hero .container,
@@ -350,15 +350,10 @@ button:focus-visible {
   border: 1px solid var(--line);
   background: #fbfdff;
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
-}
-
-.service-grid article,
-.feature-grid article,
-.article-card,
-.contact-summary,
-.contact-form {
   padding: 1.1rem;
 }
+
+
 
 .service-grid article,
 .feature-grid article {
@@ -379,28 +374,29 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-}
-
-.article-card img {
+  img {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   border-radius: 14px;
-}
-
-.article-card time {
+  }
+  time {
   color: var(--accent);
   font-weight: 700;
   font-size: 0.88rem;
-}
-
-.article-card h3 {
+  }
+  h3 {
   margin-bottom: 0;
+  color: var(--brand);
+  font-size: 1rem;
+  }
+  .button {
+  margin-top: auto;
+  }
+
+
 }
 
-.article-card .button {
-  margin-top: auto;
-}
 
 .list-check {
   list-style: none;
@@ -408,12 +404,13 @@ button:focus-visible {
   padding: 0;
   display: grid;
   gap: 0.6rem;
-}
-
-.list-check li {
+  li {
   position: relative;
   padding-left: 1.35rem;
+  }
+
 }
+
 
 .list-check li::before {
   content: "";
@@ -686,7 +683,7 @@ iframe {
   }
 
   .section {
-    padding: 3rem 0;
+    padding: 1rem 0;
   }
 
   .site-nav a,
