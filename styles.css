@@ -305,6 +305,29 @@ button:focus-visible {
   background: var(--bg-soft);
 }
 
+.article-card .button-secondary,
+.feature-grid article .button-secondary,
+.service-grid article .button-secondary,
+.contact-summary .button-secondary,
+.contact-form .button-secondary {
+  color: var(--brand);
+  background: #ffffff;
+  border-color: rgba(14, 58, 138, 0.24);
+}
+
+.article-card .button-secondary:hover,
+.article-card .button-secondary:focus-visible,
+.feature-grid article .button-secondary:hover,
+.feature-grid article .button-secondary:focus-visible,
+.service-grid article .button-secondary:hover,
+.service-grid article .button-secondary:focus-visible,
+.contact-summary .button-secondary:hover,
+.contact-summary .button-secondary:focus-visible,
+.contact-form .button-secondary:hover,
+.contact-form .button-secondary:focus-visible {
+  color: var(--brand-2);
+}
+
 .content-block {
   display: grid;
   gap: 1.6rem;
@@ -342,10 +365,18 @@ button:focus-visible {
 .contact-summary,
 .contact-form {
   border-radius: var(--radius-lg);
-  border: 1px solid var(--line);
-  background: #fbfdff;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background: var(--brand-2);
+  color: #ffffff;
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
   padding: 1.1rem;
+}
+
+.service-grid article :is(h2, h3, h4, p, li, a, small, span),
+.feature-grid article :is(h2, h3, h4, p, li, a, small, span),
+.contact-summary :is(h2, h3, h4, p, li, a, small, span),
+.contact-form :is(h2, h3, h4, p, li, a, small, span) {
+  color: #ffffff;
 }
 
 .service-grid article,
@@ -368,6 +399,15 @@ button:focus-visible {
   flex-direction: column;
   gap: 0.8rem;
 }
+.article-card a,
+.article-card p,
+.article-card li,
+.article-card h2,
+.article-card h3,
+.article-card h4,
+.article-card time {
+  color: #ffffff;
+}
 .article-card img {
   width: 100%;
   aspect-ratio: 16/10;
@@ -376,13 +416,13 @@ button:focus-visible {
   border-radius: 14px;
 }
 .article-card time {
-  color: var(--accent);
+  color: #ffffff;
   font-weight: 700;
   font-size: 0.88rem;
 }
 .article-card h3 {
   margin-bottom: 0;
-  color: var(--brand);
+  color: #ffffff;
   font-size: 1rem;
 }
 .article-card .button {
@@ -409,7 +449,7 @@ button:focus-visible {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--brand-2);
+  background: #ffffff;
 }
 
 .feature-grid article img,
@@ -422,12 +462,33 @@ button:focus-visible {
      object-fit: cover;
 }
 
+.reseau-action .feature-grid article img {
+  height: clamp(260px, 32vw, 420px);
+  aspect-ratio: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.reseau-action .feature-grid article h3 {
+  margin-bottom: 0;
+}
+
+.reseau-action .feature-grid article .list-check {
+  gap: 0;
+}
+
+.reseau-action .feature-grid article img {
+  margin-bottom: 0;
+}
+
 .feature-grid article .price {
   margin-top: auto;
   margin-bottom: 0;
   font-size: 1.45rem;
   font-weight: 800;
-  color: var(--accent);
+  color: #ffffff;
   text-align: center;
 }
 
@@ -462,7 +523,7 @@ button:focus-visible {
 
 .contact-form label {
   font-weight: 700;
-  color: var(--text-strong);
+  color: #ffffff;
 }
 
 .contact-form input,
@@ -501,6 +562,21 @@ iframe {
 
 .section-actions {
   text-align: left;
+}
+
+.section-actions .button-primary {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.button-centered {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  margin-top: 1rem;
 }
 
 .site-footer {
